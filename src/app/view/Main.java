@@ -20,8 +20,13 @@ public class Main {
         bst.insert(20);
         bst.insert(55);
         //print the BST
-        System.out.println("The BST Created with input data(Left-root-right):");
+//        System.out.println("The BST Created with input data(Left-root-right):");
+        System.out.println("InOrder:");
         bst.inorder();
+        System.out.println("\nPostOrder:");
+        bst.postorder();
+        System.out.println("\nPreOrder:");
+        bst.preorder();
 
         //delete leaf node
         System.out.println("\nThe BST after Delete 12(leaf node):");

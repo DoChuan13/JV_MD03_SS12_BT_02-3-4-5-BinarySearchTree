@@ -65,6 +65,30 @@ public class BinaryTree {
         }
     }
 
+    public void postorder() {
+        postorder_Recursive(root);
+    }
+
+    void postorder_Recursive(Node root) {
+        if (root != null) {
+            postorder_Recursive(root.left);
+            postorder_Recursive(root.right);
+            System.out.print(root.key + " ");
+        }
+    }
+
+    public void preorder() {
+        preorder_Recursive(root);
+    }
+
+    void preorder_Recursive(Node root) {
+        if (root != null) {
+            System.out.print(root.key + " ");
+            preorder_Recursive(root.left);
+            preorder_Recursive(root.right);
+        }
+    }
+
     public boolean search(int key) {
         root = search_Recursive(root, key);
         if (root != null)
